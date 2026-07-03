@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Datasets / caches downloaded at runtime
+data/
+cats_and_dogs_filtered/
+*.zip
+
+# Fonts fetched at runtime (course uses Anonymous.ttf; we bundle a matplotlib font)
+hw3/fonts/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large binaries / checkpoints
+*.pt
+*.pth
+!results/**/*.pt
+
+# Keep results figures/logs
+!results/
