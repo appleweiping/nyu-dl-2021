@@ -1,0 +1,14 @@
+HW1 - Backprop from scratch: verification
+==================================================
+
+Gradient checks vs torch.autograd (norm(diff) < 1e-3):
+  test1: ['tensor(True)', 'tensor(True)', 'tensor(True)', 'tensor(True)'] -> 4/4 gradient checks pass
+  test2: ['tensor(True)', 'tensor(True)', 'tensor(True)', 'tensor(True)'] -> 4/4 gradient checks pass
+  test3: ['tensor(True)', 'tensor(True)', 'tensor(True)', 'tensor(True)'] -> 4/4 gradient checks pass
+
+Real training run (2->64->1 MLP, hand-written backprop + manual SGD):
+  task: regress y = sin(2*x0) + 0.5*x1^2
+  initial MSE: 3.088919
+  final   MSE: 0.005010
+  reduction:   616.5x
+  figure: results/hw1/loss_curve.png
