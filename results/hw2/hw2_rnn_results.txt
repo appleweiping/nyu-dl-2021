@@ -1,0 +1,15 @@
+HW2 - RNN echo task (GRU), CPU / 3 threads
+==================================================
+
+Fixed-delay model (delay=4):
+  accuracy = 0.9922  (target > 0.99)  PASS
+  train time = 44.5s
+  demo in : 'helloworldthisisanechotest'
+  demo out: '    helloworldthisisanccho'  (shifted right by 4)
+
+Variable-delay model (delays 0..8):
+  accuracy = 0.9937  (target > 0.99)  PASS
+  train time = 513.9s
+  demo in     : 'helloworldthisisanechotest'
+  demo out d=3: '   helloworldthisisanechot'
+  demo out d=6: '      helloworldthisssanec'
