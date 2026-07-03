@@ -1,0 +1,30 @@
+HW3 - Energy-based structured prediction, CPU / 3 threads
+=======================================================
+
+SimpleNet params           : 481,179
+
+Stage 1 (single-char classifier warm-up):
+  train time               : 63s
+  single-char accuracy     : 1.0000
+
+Stage 2 (structured CTC training, words length 1..4):
+  train time               : 374s
+  initial CTC loss         : 0.0151
+  final   CTC loss         : 0.0001
+  exact-match decode accuracy by word length:
+    len 1: 1.0000
+    len 2: 1.0000
+    len 3: 1.0000
+    len 4: 1.0000
+  mean decode accuracy     : 1.0000  PASS
+  alphabet best-path energy (Viterbi): -963.34
+
+decoded examples (target -> prediction):
+  e -> e  OK
+  f -> f  OK
+  m -> m  OK
+  ed -> ed  OK
+  nb -> nb  OK
+  vw -> vw  OK
+
+figures: results/hw3/free_energy_curve.png (CTC loss), results/hw3/energy_table.png (Viterbi alignment)
